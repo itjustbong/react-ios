@@ -28,7 +28,7 @@ const ToastDefalutIcon = (type: ToastIconType) => {
   else if (type === 'warning')
     return (
       <Icon>
-        <IoSadOutline size="48px" color="yellow" />
+        <IoSadOutline size="48px" color="#FFD600" />
       </Icon>
     );
   else return null;

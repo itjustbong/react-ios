@@ -108,7 +108,7 @@ const HeaderCenter = tw.div`
 `;
 
 const HeaderRight = tw.div`
-  text-green-500
+  text-blue-600
   w-2/3
   text-right
   cursor-pointer
