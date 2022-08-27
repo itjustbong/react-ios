@@ -2,7 +2,7 @@ import type { NextPage } from 'next';
 import Button from '../components/common/Button';
 import Divider from '../components/common/Divider';
 import Header from '../components/common/Header';
-import { Col } from '../components/common/Layout';
+import { Col, Row } from '../components/common/Layout';
 import Text from '../components/common/Text';
 import usePopUp from '../hooks/usePopUp';
 import useToast from '../hooks/useToast';
@@ -32,54 +32,63 @@ const Home: NextPage = () => {
       <Divider />
 
       <Text fontWeight="bold">알림창</Text>
-      <Button
-        backgroundColor="white"
-        color="black"
-        border="1px solid black"
-        onClick={() => Toast.open({ title: '알림', content: '알림창입니다' })}
-      >
-        info - 알림창
-      </Button>
-      <Button
-        backgroundColor="white"
-        color="red"
-        border="1px solid red"
-        onClick={() =>
-          Toast.open({ title: '알림', content: '알림창입니다', type: 'error' })
-        }
-      >
-        error - 알림창
-      </Button>
 
-      <Button
-        backgroundColor="white"
-        color="green"
-        border="1px solid green"
-        onClick={() =>
-          Toast.open({
-            title: '알림',
-            content: '알림창입니다',
-            type: 'success',
-          })
-        }
-      >
-        success - 알림창
-      </Button>
+      <Row>
+        <Button
+          backgroundColor="white"
+          color="black"
+          border="1px solid black"
+          onClick={() =>
+            Toast.open({ title: '알림', content: 'info 알림창입니다' })
+          }
+        >
+          info - 알림창
+        </Button>
+        <Button
+          backgroundColor="white"
+          color="red"
+          border="1px solid red"
+          onClick={() =>
+            Toast.open({
+              title: '알림',
+              content: 'error 알림창입니다',
+              type: 'error',
+            })
+          }
+        >
+          error - 알림창
+        </Button>
 
-      <Button
-        backgroundColor="white"
-        color="#FFD600"
-        border="1px solid #FFD600"
-        onClick={() =>
-          Toast.open({
-            title: '알림',
-            content: '알림창입니다',
-            type: 'warning',
-          })
-        }
-      >
-        warning - 알림창
-      </Button>
+        <Button
+          backgroundColor="white"
+          color="green"
+          border="1px solid green"
+          onClick={() =>
+            Toast.open({
+              title: '알림',
+              content: '알림창입니다',
+              type: 'success',
+            })
+          }
+        >
+          success - 알림창
+        </Button>
+
+        <Button
+          backgroundColor="white"
+          color="#FFD600"
+          border="1px solid #FFD600"
+          onClick={() =>
+            Toast.open({
+              title: '알림',
+              content: 'warning 알림창입니다',
+              type: 'warning',
+            })
+          }
+        >
+          warning - 알림창
+        </Button>
+      </Row>
 
       <Divider />
 

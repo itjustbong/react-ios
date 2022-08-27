@@ -6,7 +6,8 @@ import React from 'react';
 import Text from './Text';
 import usePopUp from '../../hooks/usePopUp';
 import useToast from '../../hooks/useToast';
-import { Col } from './Layout';
+import { Col, Row } from './Layout';
+import { FaReact } from 'react-icons/fa';
 
 const MenuList = [
   { name: '팝업', url: '/pop-up' },
@@ -25,12 +26,15 @@ const Header = (props: HeaderType) => {
 
       <Right>
         <Link href="/">
-          <Col>
-            <Text>REACT</Text>
-            <Text>with IOS</Text>
-          </Col>
+          <Row>
+            <FaReact color="sky" size="32px" />
+            <Text color="gray" fontWeight="bold">
+              with IOS
+            </Text>
+          </Row>
         </Link>
       </Right>
+
       <Left>
         {MenuList.map((item) => (
           <Menu key={item.name} clicked={item.url === props.loc}>
